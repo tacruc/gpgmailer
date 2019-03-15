@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>gpgmailer</id>
+    <name>Gpg Mailer</name>
+    <summary>Send encryped emails to registered users</summary>
+    <description><![CDATA[If user a uploads a public key, emails to this user will be encrypted and signed.
+All other emails will be signed
+This App depends on gnupg.]]></description>
+    <version>0.0.1</version>
+    <licence>agpl</licence>
+    <author mail="gpgmailer@arne.email" >Arne Hamann</author>
+    <namespace>GpgMailer</namespace>
+    <category>security</category>
+    <category>social</category>
+    <category>tools</category>
+    <bugs>https://github.com</bugs>
+    <dependencies>
+        <nextcloud min-version="16" max-version="18"/>
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>Gpg Mailer</name>
+            <route>gpgmailer.page.index</route>
+        </navigation>
+    </navigations>
+</info>

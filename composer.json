@@ -1,0 +1,15 @@
+{
+    "name": "Gpg Mailer",
+    "description": "Send encryped emails to registered users",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "Arne Hamann"
+        }
+    ],
+    "require": {gnupg},
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}
