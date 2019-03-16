@@ -14,7 +14,7 @@ This App depends on gnupg.]]></description>
     <category>security</category>
     <category>social</category>
     <category>tools</category>
-    <bugs>https://github.com</bugs>
+    <bugs>https://github.com/tacruc/gpgmailer/issues</bugs>
     <dependencies>
         <nextcloud min-version="16" max-version="18"/>
     </dependencies>
@@ -24,4 +24,9 @@ This App depends on gnupg.]]></description>
             <route>gpgmailer.page.index</route>
         </navigation>
     </navigations>
+    <repair-steps>
+        <install>
+            <step>OCA\GpgMailer\Migration\CreateGpgServerKeys</step>
+        </install>
+    </repair-steps>
 </info>
