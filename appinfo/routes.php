@@ -10,6 +10,7 @@
 return [
     'routes' => [
 	   ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
-	   ['name' => 'page#do_echo', 'url' => '/echo', 'verb' => 'POST'],
+	   ['name' => 'key#downloadServerKey', 'url' => '/key/download/server', 'verb' => 'GET'],
+	   ['name' => 'key#uploadUserKey', 'url' => '/key/upload', 'verb' => 'POST'],
     ]
 ];

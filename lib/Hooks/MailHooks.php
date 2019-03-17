@@ -2,6 +2,7 @@
 /**
  * @copyright Copyright (c) 2019, Arne Hamann <gpgmailer@arne.email>.
  *
+ * @author Arne Hamann <gpgmailer@arne.email>
  * @license AGPL-3.0
  *
  * This code is free software: you can redistribute it and/or modify
@@ -144,7 +145,7 @@ class MailHooks {
 		$keydata = trim($keydata);
 		$swiftmessage = $message->getSwiftMessage();
 		$swiftmessage->getHeaders()->addParameterizedHeader('Autocrypt', '' ,['addr' => $message->getFrom()[0], 'prefer-encrypt' => 'mutual', 'keydata' => $keydata] );
-		$keyattach = \OC::$server->getMailer()->createAttachment($keydataRaw,"public.asc");
+		$keyattach = $this->mailer->createAttachment($keydataRaw,"public.asc");
 		$message->setSwiftMessage($swiftmessage);
 		$message->attach($keyattach);
 		$swiftmessage = $message->getSwiftMessage();

@@ -7,7 +7,7 @@
     <description><![CDATA[If user a uploads a public key, emails to this user will be encrypted and signed.
 All other emails will be signed
 This App depends on gnupg.]]></description>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <licence>agpl</licence>
     <author mail="gpgmailer@arne.email" >Arne Hamann</author>
     <namespace>GpgMailer</namespace>
@@ -29,4 +29,9 @@ This App depends on gnupg.]]></description>
             <step>OCA\GpgMailer\Migration\CreateGpgServerKeys</step>
         </install>
     </repair-steps>
+    <settings>
+        <admin>OCA\GpgMailer\Settings\Admin</admin>
+        <personal>OCA\GpgMailer\Settings\Personal</personal>
+    </settings>
+
 </info>

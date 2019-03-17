@@ -24,6 +24,7 @@ use OCP\AppFramework\App;
 
 use OCA\GpgMailer\Hooks\MailHooks;
 use OCA\GpgMailer\Gpg;
+#use OCP\App as OCPApp;
 
 class Application extends App  {
 
@@ -69,4 +70,5 @@ class Application extends App  {
 	public function registerHooks() {
 		$this->getContainer()->query('MailHooks')->register();
 	}
+
 }

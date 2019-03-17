@@ -6,5 +6,6 @@
 	</div>
 	<div id="app-settings-content">
 		<!-- Your settings in here -->
+		Hello World
 	</div>
 </div>

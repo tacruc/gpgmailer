@@ -1,17 +1,23 @@
 <?php
 namespace OCA\GpgMailer\Controller;
 
-use OCP\IRequest;
+use OCA\GpgMailer\Gpg;
+use OCP\IConfig;use OCP\IRequest;
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\Http\DataDownloadResponse;
+use OCP\AppFramework\Http\NotFoundResponse;
 use OCP\AppFramework\Controller;
 
 class PageController extends Controller {
 	private $userId;
+	private $config;
+	private $gpg;
 
-	public function __construct($AppName, IRequest $request, $UserId){
+	public function __construct($AppName, IRequest $request, Gpg $gpg, IConfig $config,  $UserId){
 		parent::__construct($AppName, $request);
 		$this->userId = $UserId;
+		$this->gpg = $gpg;
+		$this->config = $config;
 	}
 
 	/**

@@ -2,7 +2,7 @@
 /**
  * @copyright Copyright (c) 2017 Arne Hamann <kontakt+github@arne.email>
  *
- * @author Arne Hamann <kontakt+github@arne.email>
+ * @author Arne Hamann <gpgmailer@arne.email>
  *
  * @license GNU AGPL version 3 or any later version
  *
