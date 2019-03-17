@@ -18,12 +18,6 @@ This App depends on gnupg.]]></description>
     <dependencies>
         <nextcloud min-version="16" max-version="18"/>
     </dependencies>
-    <navigations>
-        <navigation>
-            <name>Gpg Mailer</name>
-            <route>gpgmailer.page.index</route>
-        </navigation>
-    </navigations>
     <repair-steps>
         <install>
             <step>OCA\GpgMailer\Migration\CreateGpgServerKeys</step>
