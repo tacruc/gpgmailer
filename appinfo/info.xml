@@ -4,10 +4,10 @@
     <id>gpgmailer</id>
     <name>Gpg Mailer</name>
     <summary>Send encrypted emails to registered users</summary>
-    <description><![CDATA[If user a uploads a public key, emails to this user will be encrypted and signed.
+    <description>If user a uploads a public key, emails to this user will be encrypted and signed.
 All other emails will be signed
-This App depends on gnupg.]]></description>
-    <version>0.0.1-alpha.1</version>
+This App depends on gnupg.</description>
+    <version>0.0.1-alpha.2</version>
     <licence>agpl</licence>
     <author mail="gpgmailer@arne.email" >Arne Hamann</author>
     <namespace>GpgMailer</namespace>
