@@ -8,7 +8,7 @@
             "name": "Arne Hamann"
         }
     ],
-    "require": {gnupg},
+    "require": {},
     "require-dev": {
         "phpunit/phpunit": "^5.4"
     }
