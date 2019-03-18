@@ -75,7 +75,7 @@ class MailHooks {
 					foreach ($encrypt_fingerprints as $encrypt_fingerprint) {
 						$encrypt_fingerprints_text = $encrypt_fingerprints_text . "," . $encrypt_fingerprint;
 					}
-					$this->logger->debug("GPG Mail encrypt and sign Message with encrypt Keys:".$encrypt_fingerprints_text." and sign Keys:".$sign_fingerprints_text);
+					$this->logger->debug("GPG Mail encrypt and sign Message with encrypt Keys:".$encrypt_fingerprints_text." and sign Keys:".$sign_fingerprints_text,['app'=>$this->appName]);
 				}
 				$this->encryptSignMessage($encrypt_fingerprints, $sign_fingerprints, $message);
 			} else {
@@ -84,7 +84,7 @@ class MailHooks {
 					foreach ($encrypt_fingerprints as $encrypt_fingerprint) {
 						$encrypt_fingerprints_text = $encrypt_fingerprints_text . "," . $encrypt_fingerprint;
 					}
-					$this->logger->debug("GPG Mail encrypt Message with encrypt Keys:".$encrypt_fingerprints_text);
+					$this->logger->debug("GPG Mail encrypt Message with encrypt Keys:".$encrypt_fingerprints_text, ['app'=>$this->appName]);
 				}
 				$this->encryptMessage($encrypt_fingerprints, $message);
 			}
@@ -95,10 +95,10 @@ class MailHooks {
 					$sign_fingerprints_text = $sign_fingerprints_text.",".$sign_fingerprint;
 				}
 				$this->signMessage($sign_fingerprints, $message);
-				$this->logger->debug("GPG Mail sign Message with sign Keys:".$sign_fingerprints_text);
+				$this->logger->debug("GPG Mail sign Message with sign Keys:".$sign_fingerprints_text, ['app'=>$this->appName]);
 			} else {
 				if($debugMode) {
-					$this->logger->debug("GPG Mail no encryption and sign keys avalible keeping plain message:\"".$message->getPlainBody()."\"");
+					$this->logger->debug("GPG Mail no encryption and sign keys avalible keeping plain message:\"".$message->getPlainBody()."\"", ['app'=>$this->appName]);
 				}
 			}
 		}

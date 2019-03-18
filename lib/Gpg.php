@@ -87,7 +87,7 @@ class Gpg {
 			foreach ($fingerprints as $encrypt_fingerprint) {
 				$encrypt_fingerprints_text = $encrypt_fingerprints_text . "," . $encrypt_fingerprint;
 			}
-			$this->logger->debug("GPG encrypted plain message: with encrypt keys:" . $encrypt_fingerprints_text . " to gpg text");
+			$this->logger->debug("GPG encrypted plain message: with encrypt keys:" . $encrypt_fingerprints_text . " to gpg text", ['app'=>$this->appName]);
 		}
 		return $gpg_text;
 	}
@@ -130,7 +130,7 @@ class Gpg {
 			foreach ($encrypt_fingerprints as $encrypt_fingerprint) {
 				$encrypt_fingerprints_text = $encrypt_fingerprints_text . "," . $encrypt_fingerprint;
 			}
-			$this->logger->debug("GPG encryptsigned plain message: with encrypt keys:" . $encrypt_fingerprints_text . " with sign Keys:" . $sign_fingerprints_text . " to gpg text");
+			$this->logger->debug("GPG encryptsigned plain message: with encrypt keys:" . $encrypt_fingerprints_text . " with sign Keys:" . $sign_fingerprints_text . " to gpg text", ['app'=>$this->appName]);
 		}
 		return $gpg_text;
 	}
@@ -164,7 +164,7 @@ class Gpg {
 					$sign_fingerprints_text = $sign_fingerprints_text . "," . $key;
 				}
 			}
-			$this->logger->debug("GPG signed plain message: with sign keys:" . $sign_fingerprints_text);
+			$this->logger->debug("GPG signed plain message: with sign keys:" . $sign_fingerprints_text, ['app'=>$this->appName]);
 		}
 		return $gpg_text;
 	}
@@ -276,7 +276,7 @@ class Gpg {
 				$name = $this->defaults->getName();
 				$commend = $this->defaults->getSlogan();
 			} else {
-				$this->logger->info("Creating Key without email or name is not possible");
+				$this->logger->info("Creating Key without email or name is not possible", ['app'=>$this->appName]);
 				return "";
 			}
 		}
@@ -287,7 +287,7 @@ class Gpg {
 		}
 		$home = rtrim($home,DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR;
 		if ($debugMode) {
-			$this->logger->debug("Generate server key for email:".$email);
+			$this->logger->debug("Generate server key for email:".$email, ['app'=>$this->appName]);
 		}
 		//generate Keys
 		$cwd = getcwd();
@@ -312,7 +312,7 @@ EFF
 		$foo = exec("gpg --batch --gen-key foo 2>&1",$out2);
 		$timestamp_after = time();
 		if ($debugMode) {
-			$this->logger->debug("gpg --batch --gen-key foo:\n" . print_r($out2,TRUE)."\n This took ".($timestamp_after-$timestamp_before)."seconds.");
+			$this->logger->debug("gpg --batch --gen-key foo:\n" . print_r($out2,TRUE)."\n This took ".($timestamp_after-$timestamp_before)."seconds.", ['app'=>$this->appName]);
 		}
 		$foo = system("rm foo",$out);
 		chdir($cwd);
@@ -321,17 +321,17 @@ EFF
 		foreach ($keys as $key) {
 			if ($key["subkeys"][0]["timestamp"] >= $timestamp_before && $key["subkeys"][0]["timestamp"] <= $timestamp_after) {
 				if ($debugMode){
-					$this->logger->debug("Found new server key:" .$key["subkeys"][0]["fingerprint"]);
+					$this->logger->debug("Found new server key:" .$key["subkeys"][0]["fingerprint"], ['app'=>$this->appName]);
 				}
 				$fingerprint = $key['subkeys'][0]['fingerprint'];
 				$timestamp_before = $key["subkeys"][0]["timestamp"];
 			}
 		}
 		if ($fingerprint === "") {
-			$this->logger->warning("No server GPG key found so no signed emails are possible");
+			$this->logger->warning("No server GPG key found so no signed emails are possible", ['app'=>$this->appName]);
 		}
 		if ($debugMode){
-			$this->logger->debug("Saved server key fingerprint:".$fingerprint." to system config");
+			$this->logger->debug("Saved server key fingerprint:".$fingerprint." to system config", ['app'=>$this->appName]);
 		}
 		if ($uid === null || $uid ==='' ) {
 			$this->config->setAppValue($this->appName,"GpgServerKey",$fingerprint);
