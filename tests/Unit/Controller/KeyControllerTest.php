@@ -24,7 +24,7 @@ class KeyControllerTest extends PHPUnit_Framework_TestCase {
 
 	public function testDownloadServerKey() {
 		$result = $this->controller->downloadServerKey();
-		
+
 	}
 
 }

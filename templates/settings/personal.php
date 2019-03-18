@@ -10,7 +10,7 @@
 	<h2><?php p($l->t('GPG Keys')); ?></h2>
 
 
-	<p><textarea title="<?php p($l->t('Public Key')); ?>" class="personal_pubkey" ><?php p($_['pubkey']);?></textarea></p>
+	<p><textarea title="<?php p($l->t('Public Key')); ?>" class="pubkey" ><?php p($_['pubkey']);?></textarea></p>
 
 
 	<button><?php p($l->t('Download Server Key')); ?></button>
