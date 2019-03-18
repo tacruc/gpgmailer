@@ -135,7 +135,7 @@ class MailHooks {
 		return $int;
 	}
 	private function validFingerprint(string $fingerprint) {
-		return $fingerprint != '';
+		return $fingerprint !== '';
 	}
 
 	private function signMessage(Array $sign_fingerprints, IMessage $message) {
