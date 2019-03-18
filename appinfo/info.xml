@@ -3,11 +3,11 @@
       xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>gpgmailer</id>
     <name>Gpg Mailer</name>
-    <summary>Send encryped emails to registered users</summary>
+    <summary>Send encrypted emails to registered users</summary>
     <description><![CDATA[If user a uploads a public key, emails to this user will be encrypted and signed.
 All other emails will be signed
 This App depends on gnupg.]]></description>
-    <version>0.0.2</version>
+    <version>0.0.1-alpha.1</version>
     <licence>agpl</licence>
     <author mail="gpgmailer@arne.email" >Arne Hamann</author>
     <namespace>GpgMailer</namespace>
@@ -28,5 +28,4 @@ This App depends on gnupg.]]></description>
         <admin>OCA\GpgMailer\Settings\Admin</admin>
         <personal>OCA\GpgMailer\Settings\Personal</personal>
     </settings>
-
 </info>
