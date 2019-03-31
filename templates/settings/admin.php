@@ -12,8 +12,8 @@
 
 	<?php if (!empty($_['pubkey'])): ?>
 
-		<p><textarea title="<?php p($l->t('Public Key')); ?>" class="server_pubkey" readonly="readonly"><?php p($_['pubkey']);?></textarea></p>
-		<p><textarea title="<?php p($l->t('Public Key')); ?>" class="server_keyinfo" readonly="readonly"><?php p($_['keyinfo']);?></textarea></p>
+		<p><textarea readonly="true" title="<?php p($l->t('Public Key')); ?>" class="server_pubkey" readonly="readonly"><?php p($_['pubkey']);?></textarea></p>
+		<p><textarea readonly="true" title="<?php p($l->t('Public Key')); ?>" class="server_keyinfo" readonly="readonly"><?php p($_['keyinfo']);?></textarea></p>
 
 	<?php endif; ?>
 

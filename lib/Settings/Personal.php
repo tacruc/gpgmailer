@@ -82,14 +82,16 @@ class Personal implements ISettings {
 	public function getForm() {
 		$user = $this->userManager->get($this->userId);
 		$fingerprint = $this->gpg->getPublicKeyFromEmail($user->getEMailAddress());
-		$parameters = [];
+		$parameters = [
+			'server_pubkey_url' => $this->url->linkToRouteAbsolute("gpgmailer.key.downloadServerKey"),
+			'post_url' => $this->url->linkToRouteAbsolute("gpgmailer.key.uploadUserKey")
+		];
 		if ($fingerprint !== '') {
 			$server_keyinfo = print_r($this->gpg->keyinfo($fingerprint),true);
 			$server_pubkey = $this->gpg->export($fingerprint);
 			$parameters += [
 				'pubkey' => $server_pubkey,
-				'keyinfo' => $server_keyinfo,
-				'server_pubkey_url' => $this->url->linkToRouteAbsolute("gpgmailer.key.downloadServerKey")
+				'keyinfo' => $server_keyinfo
 			];
 		}
 

@@ -8,19 +8,22 @@ use OCP\AppFramework\Http\DataDownloadResponse;
 use OCP\AppFramework\Http\NotFoundResponse;
 use OCP\AppFramework\Controller;
 use OCP\IUserManager;
+use OCP\ILogger;
 
 class KeyController extends Controller {
 	private $userId;
 	private $userManager;
 	private $config;
 	private $gpg;
+	private $logger;
 
-	public function __construct($AppName, IRequest $request, Gpg $gpg, IConfig $config, IUserManager $userManager,  $UserId){
+	public function __construct($AppName, IRequest $request, Gpg $gpg, IConfig $config, IUserManager $userManager,  $UserId, ILogger $logger){
 		parent::__construct($AppName, $request);
 		$this->userId = $UserId;
 		$this->userManager = $userManager;
 		$this->gpg = $gpg;
 		$this->config = $config;
+		$this->logger = $logger;
 	}
 
 	/**
@@ -47,23 +50,46 @@ class KeyController extends Controller {
 
 	}
 
+	/**
+	 * @NoAdminRequired
+	 * @NoCSRFRequired:
+	 */
 	public function uploadUserKey($keydata) {
 		$email = $this->userManager->get($this->userId)->getEMailAddress();
+		if (strlen($keydata) === 0){
+			$this->deleteUserKey();
+		}
 		$fingerprint = $this->gpg->import($keydata,  $this->userId);
-		$keyinfo = $this->gpg->keyinfo($fingerprint,  $this->userId);
-		$key_for_email = false;
-		foreach ($keyinfo[0]['uids'] as $uid) {
-			if ($uid['email'] === $email) {
-				$key_for_email = true;
-				break;
+		if ($fingerprint) {
+			$fingerprint = $fingerprint['fingerprint'];
+			$this->logger->debug("Imported Key with fingerprint: ".$fingerprint." into the user keyring", ["app"=> $this->appName]);
+			$keyinfo = $this->gpg->keyinfo($fingerprint, $this->userId);
+			$key_for_email = false;
+			foreach ($keyinfo[0]['uids'] as $uid) {
+				if ($uid['email'] === $email) {
+					$key_for_email = true;
+					break;
+				}
+			}
+
+			if ($key_for_email) {
+				$this->logger->debug("Imported Key with fingerprint: ".$fingerprint." into the system keyring", ["app"=> $this->appName]);
+				$this->gpg->import($keydata);
 			}
 		}
+	}
 
-		if ($key_for_email) {
-			$this->gpg->import($keydata);
-			return $fingerprint;
+	public function deleteUserKey(){
+		$email = $this->userManager->get($this->userId)->getEMailAddress();
+		$fingerprint = $this->gpg->getPublicKeyFromEmail($email);
+
+		if ($this->gpg->deletekey($fingerprint)){
+			$this->logger->debug("Deleted Key with fingerprint: ".$fingerprint." from the system keyring", ["app"=> $this->appName]);
+		};
+
+		if ($this->gpg->deletekey($fingerprint, $this->userId)){
+			$this->logger->debug("Deleted Key with fingerprint: ".$fingerprint." from the user keyring", ["app"=> $this->appName]);
 		}
-
 	}
 
 }
