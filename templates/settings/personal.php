@@ -13,6 +13,6 @@
 	<p><textarea title="<?php p($l->t('Public Key')); ?>" class="pubkey" ><?php p($_['pubkey']);?></textarea></p>
 
 
-	<button><?php p($l->t('Download Server Key')); ?></button>
+	<a href="<?php p($_['server_pubkey_url'])?>"><button><?php p($l->t('Download Server Key')); ?></button></a>
 
 </div>

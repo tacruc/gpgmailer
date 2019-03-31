@@ -28,6 +28,7 @@ use OCP\IConfig;
 use OCP\IDateTimeFormatter;
 use OCP\IL10N;
 use OCP\Settings\ISettings;
+use OCP\IURLGenerator;
 
 class Admin implements ISettings {
 
@@ -41,20 +42,26 @@ class Admin implements ISettings {
 	/** @var string */
 	private $appName;
 
+	/** @var IURLGenerator */
+	private $url;
+
 	/**
 	 * Admin constructor.
 	 *
 	 * @param IConfig $config
 	 * @param Gpg $gpg
 	 * @param $appName
+	 * @param IURLGenerator $url
 	 */
 	public function __construct(IConfig $config,
 								Gpg $gpg,
-								$appName
+								$appName,
+								IURLGenerator $url
 	) {
 		$this->config = $config;
 		$this->gpg = $gpg;
 		$this->appName = $appName;
+		$this->url = $url;
 	}
 
 	/**
@@ -69,7 +76,8 @@ class Admin implements ISettings {
 			$server_pubkey = $this->gpg->export($fingerprint);
 			$parameters += [
 				'pubkey' => $server_pubkey,
-				'keyinfo' => $server_keyinfo
+				'keyinfo' => $server_keyinfo,
+				'server_pubkey_url' => $this->url->linkToRouteAbsolute("gpgmailer.key.downloadServerKey")
 			];
 		}
 

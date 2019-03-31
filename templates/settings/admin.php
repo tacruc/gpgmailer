@@ -17,6 +17,6 @@
 
 	<?php endif; ?>
 
-	<button><?php p($l->t('Download')); ?></button>
+	<a href="<?php p($_['server_pubkey_url'])?>"><button><?php p($l->t('Download')); ?></button></a>
 
 </div>
