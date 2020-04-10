@@ -21,7 +21,7 @@
 
 namespace OCA\GpgMailer\Settings;
 
-use OCA\GpgMailer\Gpg;
+use OCA\GpgMailer\Service\Gpg;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\BackgroundJob\IJobList;
 use OCP\IConfig;

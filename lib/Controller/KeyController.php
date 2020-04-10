@@ -1,7 +1,7 @@
 <?php
 namespace OCA\GpgMailer\Controller;
 
-use OCA\GpgMailer\Gpg;
+use OCA\GpgMailer\Service\Gpg;
 use OCP\IConfig;use OCP\IRequest;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Http\DataDownloadResponse;

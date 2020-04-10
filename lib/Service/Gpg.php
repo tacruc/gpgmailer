@@ -21,7 +21,7 @@
  *
  */
 
-namespace OCA\GpgMailer;
+namespace OCA\GpgMailer\Service;
 
 use OCP\Defaults;
 use OCP\IConfig;

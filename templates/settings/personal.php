@@ -8,7 +8,7 @@
 
 <div id="gpgmailer" class="section">
 	<h2><?php p($l->t('GPG Keys')); ?></h2>
-	<form action=<?php p($_['post_url'])?> method="post" target="_blank">
+	<form action=<?php p($_['post_url'])?>  method="post" target="transFrame">
 		<p>
 			<textarea
 					title="<?php p($l->t('Public Key')); ?>"
@@ -18,6 +18,7 @@
 					type="text"><?php p($_['pubkey']);?></textarea>
 		</p>
 		<input type="submit" value="Save"/>
+		<iframe style="" name="transFrame" id="transFrame"></iframe>
 	</form>
 	<a href="<?php p($_['server_pubkey_url'])?>"><button><?php p($l->t('Download Server Key')); ?></button></a>
 </div>

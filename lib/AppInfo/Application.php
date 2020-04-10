@@ -20,10 +20,12 @@
 namespace OCA\GpgMailer\AppInfo;
 
 
+
 use OCP\AppFramework\App;
 
 use OCA\GpgMailer\Hooks\MailHooks;
-use OCA\GpgMailer\Gpg;
+use OCA\GpgMailer\Service\Gpg;
+use OCA\GpgMailer\Service\GpgMessageConvertService;
 #use OCP\App as OCPApp;
 
 class Application extends App  {
@@ -54,12 +56,22 @@ class Application extends App  {
 			);
 		});
 
-		$container->registerService('MailHooks', function($c) {
-			return new MailHooks(
+		$container->registerService('GpgMessageConvert', function($c) {
+			return new GpgMessageConvertService(
 				$c->query('Config'),
 				$c->query('Gpg'),
 				$c->query('Logger'),
 				$c->query('Mailer'),
+				$c->query('AppName')
+			);
+		});
+
+		$container->registerService('MailHooks', function($c) {
+			return new MailHooks(
+				$c->query('Config'),
+				$c->query('Logger'),
+				$c->query('OCP\EventDispatcher\IEventDispatcher'),
+				$c->query('GpgMessageConvert'),
 				$c->query('AppName')
 			);
 		});

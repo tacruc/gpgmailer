@@ -17,7 +17,7 @@ class KeyControllerTest extends PHPUnit_Framework_TestCase {
 	public function setUp() {
 		$request = $this->getMockBuilder('OCP\IRequest')->getMock();
 		$userManager = $this->getMockBuilder('OCP\IUserManager')->getMock();
-		$gpg = $this->getMockBuilder('OCA\GpgMailer\Gpg')->getMock();
+		$gpg = $this->getMockBuilder('OCA\GpgMailer\Service\Gpg')->getMock();
 		$config = $this->getMockBuilder('OCP\IConfig')->getMock();
 		$this->controller = new KeyController("gpgmailer",$request, $gpg, $config, $userManager, $this->userId);
 	}

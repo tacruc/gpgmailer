@@ -23,7 +23,7 @@
 
 namespace OCA\GpgMailer\Migration;
 
-use OCA\GpgMailer\Gpg;
+use OCA\GpgMailer\Service\Gpg;
 use OCP\IUserManager;
 use OCP\Migration\IOutput;
 use OCP\Migration\IRepairStep;

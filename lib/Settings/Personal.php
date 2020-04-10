@@ -21,7 +21,7 @@
 
 namespace OCA\GpgMailer\Settings;
 
-use OCA\GpgMailer\Gpg;
+use OCA\GpgMailer\Service\Gpg;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IConfig;
 use OCP\IDateTimeFormatter;
@@ -92,6 +92,11 @@ class Personal implements ISettings {
 			$parameters += [
 				'pubkey' => $server_pubkey,
 				'keyinfo' => $server_keyinfo
+			];
+		} else {
+			$parameters += [
+				'pubkey' => '',
+				'keyinfo' => ''
 			];
 		}
 
