@@ -1,5 +1,5 @@
 {
-    "name": "Gpg Mailer",
+    "name": "tacruc/gpgmailer",
     "description": "Send encryped emails to registered users",
     "type": "project",
     "license": "AGPL",

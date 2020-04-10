@@ -3,7 +3,7 @@ namespace OCA\GpgMailer\Controller;
 
 use OCA\GpgMailer\Service\Gpg;
 use OCP\IConfig;use OCP\IRequest;
-use OCP\AppFramework\Http\TemplateResponse;
+use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Http\DataDownloadResponse;
 use OCP\AppFramework\Http\NotFoundResponse;
 use OCP\AppFramework\Controller;
@@ -52,12 +52,12 @@ class KeyController extends Controller {
 
 	/**
 	 * @NoAdminRequired
-	 * @NoCSRFRequired:
 	 */
 	public function uploadUserKey($keydata) {
+		$this->logger->debug("User Key uploaded",["app"=> $this->appName]);
 		$email = $this->userManager->get($this->userId)->getEMailAddress();
 		if (strlen($keydata) === 0){
-			$this->deleteUserKey();
+			return $this->deleteUserKey();
 		}
 		$fingerprint = $this->gpg->import($keydata,  $this->userId);
 		if ($fingerprint) {
@@ -75,11 +75,15 @@ class KeyController extends Controller {
 			if ($key_for_email) {
 				$this->logger->debug("Imported Key with fingerprint: ".$fingerprint." into the system keyring", ["app"=> $this->appName]);
 				$this->gpg->import($keydata);
+				return new DataResponse(['message'=>"Imported public key"]);
+			} else {
+				return new DataResponse(['message'=>"Key is not for your email"]);
 			}
 		}
+		return new DataResponse(['message'=>"Key import  Failed"]);
 	}
 
-	public function deleteUserKey(){
+	private function deleteUserKey(){
 		$email = $this->userManager->get($this->userId)->getEMailAddress();
 		$fingerprint = $this->gpg->getPublicKeyFromEmail($email);
 
@@ -90,6 +94,7 @@ class KeyController extends Controller {
 		if ($this->gpg->deletekey($fingerprint, $this->userId)){
 			$this->logger->debug("Deleted Key with fingerprint: ".$fingerprint." from the user keyring", ["app"=> $this->appName]);
 		}
+		return new DataResponse(['message'=>"Deleted Public Key"]);
 	}
 
 }
