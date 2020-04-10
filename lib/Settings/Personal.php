@@ -100,8 +100,6 @@ class Personal implements ISettings {
 			];
 		}
 
-
-
 		return new TemplateResponse($this->appName, 'settings/personal', $parameters);
 	}
 

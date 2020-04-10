@@ -49,9 +49,9 @@ class Application extends App  {
 		$container->registerService('Gpg', function($c) {
 			return new Gpg(
 				$c->query('Config'),
-				$c->query('Defaults'),
-				$c->query('Logger'),
-				$c->query('UserManager'),
+				$c->query('OCP\Defaults'),
+				$c->query('OC\Log'),
+				$c->query('OC\User\Manager'),
 				$c->query('AppName')
 			);
 		});
@@ -60,7 +60,7 @@ class Application extends App  {
 			return new GpgMessageConvertService(
 				$c->query('Config'),
 				$c->query('Gpg'),
-				$c->query('Logger'),
+				$c->query('OC\Log'),
 				$c->query('Mailer'),
 				$c->query('AppName')
 			);
@@ -69,7 +69,7 @@ class Application extends App  {
 		$container->registerService('MailHooks', function($c) {
 			return new MailHooks(
 				$c->query('Config'),
-				$c->query('Logger'),
+				$c->query('OC\Log'),
 				$c->query('OCP\EventDispatcher\IEventDispatcher'),
 				$c->query('GpgMessageConvert'),
 				$c->query('AppName')
