@@ -66,7 +66,7 @@ class KeyController extends Controller {
 			$keyinfo = $this->gpg->keyinfo($fingerprint, $this->userId);
 			$key_for_email = false;
 			foreach ($keyinfo[0]['uids'] as $uid) {
-				if ($uid['email'] === $email) {
+				if (strtolower($uid['email']) === strtolower($email)) {
 					$key_for_email = true;
 					break;
 				}
