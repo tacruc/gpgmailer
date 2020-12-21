@@ -3,7 +3,7 @@
 /** @var $_ array */
 
 //script('myappid', 'admin');         // adds a JavaScript file
-//style('survey_client', 'admin');    // adds a CSS file
+style('gpgmailer', 'adminSettings');    // adds a CSS file
 ?>
 
 <div id="gpgmailer" class="section">
