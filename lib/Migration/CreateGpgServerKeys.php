@@ -56,7 +56,7 @@ class CreateGpgServerKeys implements IRepairStep {
 	 * {@inheritdoc}
 	 */
 	public function getName() {
-		return 'Create server gpg key pair';
+		return 'Create server GPG key pair';
 	}
 	/**
 	 * {@inheritdoc}
