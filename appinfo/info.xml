@@ -2,7 +2,7 @@
 <info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>gpgmailer</id>
-    <name>Gpg Mailer</name>
+    <name>GPG Mailer</name>
     <summary>Send encrypted emails to registered users</summary>
     <description>If user uploads public key, emails to this user will be encrypted and signed.
 All other emails will be signed
