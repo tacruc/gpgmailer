@@ -1,8 +1,6 @@
 { "translations": {
     "Failed to save PublicKey" : "Kon PublicKey niet opslaan",
-    "Gpg Mailer" : "Gpg Mailer",
     "Send encrypted emails to registered users" : "Verstuur versleutelde e-mails naar geregistreerde gebruikers",
-    "If user a uploads a public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Als een gebruiker een openbare sleutel uploadt, worden e-mails naar deze gebruiker versleuteld en ondertekend.\nAlle andere e-mails worden ondertekend\nDeze app is afhankelijk van gnupg.",
     "Server GPG Keys" : "Server GPG Keys",
     "Public Key" : "Public Key",
     "Download" : "Download",

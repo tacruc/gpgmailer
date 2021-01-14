@@ -2,9 +2,7 @@ OC.L10N.register(
     "gpgmailer",
     {
     "Failed to save PublicKey" : "保存公钥失败",
-    "Gpg Mailer" : "Gpg Mailer",
     "Send encrypted emails to registered users" : "给注册用户发送加密电子邮件",
-    "If user a uploads a public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "如果用户 a 上传了一个公钥，则发送给该用户的电子邮件将被加密并签名。所有其他邮件都将被签名。此应用程序依赖于 gnupg。",
     "Server GPG Keys" : "服务器 GPG 密钥",
     "Public Key" : "公钥",
     "Download" : "下载",

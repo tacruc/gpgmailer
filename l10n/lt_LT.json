@@ -1,8 +1,6 @@
 { "translations": {
     "Failed to save PublicKey" : "Nepavyko įrašyti viešojo rakto",
-    "Gpg Mailer" : "GPG pašto programa",
     "Send encrypted emails to registered users" : "Siųsti šifruotus el. laiškus registruotiems naudotojams",
-    "If user a uploads a public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Jei naudotojas įsikels raktą, el. laiškai šiam naudotojui bus šifruojami ir pasirašomi.\nVisi kiti el. laiškai bus pasirašomi.\nŠi programėlė priklauso nuo gnupg.",
     "Server GPG Keys" : "Serverio GPG raktai",
     "Public Key" : "Viešasis raktas",
     "Download" : "Atsisiųsti",
