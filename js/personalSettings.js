@@ -18,7 +18,7 @@ function setPrivateKey(keydata) {
 
 	}).fail(function() {
 		OC.Notification.showTemporary(
-			t('gpgmailer', 'Failed to save PublicKey')
+			t('gpgmailer', 'Failed to save Public Key')
 		);
 	});
 }
