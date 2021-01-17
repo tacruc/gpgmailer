@@ -2,6 +2,7 @@ OC.L10N.register(
     "gpgmailer",
     {
     "Failed to save PublicKey" : "Nepavyko įrašyti viešojo rakto",
+    "GPG Mailer" : "GPG pašto programa",
     "Send encrypted emails to registered users" : "Siųsti šifruotus el. laiškus registruotiems naudotojams",
     "Server GPG Keys" : "Serverio GPG raktai",
     "Public Key" : "Viešasis raktas",
