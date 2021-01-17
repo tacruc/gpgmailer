@@ -65,17 +65,17 @@ class CreateGpgServerKeys implements IRepairStep {
 		$fingerprint = $this->config->getAppValue($this->appName,'GpgServerKey','');
 		if($fingerprint === ''){
 			$fingerprint = $this->gpg->generateKey();
-			$this->logger->info("Created server gpg key pair ".$fingerprint, ['app' => $this->appName]);
+			$this->logger->info("Created server GPG key pair ".$fingerprint, ['app' => $this->appName]);
 		} else {
 			$keys = $this->gpg->keyinfo($fingerprint);
 			if ($keys === FALSE || $keys === []) {
 				$fingerprint = $this->gpg->generateKey();
-				$this->logger->info("Created server gpg key pair ".$fingerprint, ['app' => $this->appName]);
+				$this->logger->info("Created server GPG key pair ".$fingerprint, ['app' => $this->appName]);
 			}
 		}
 		$keys = $this->gpg->keyinfo($fingerprint);
 		if ($keys === FALSE || $keys === []) {
-			$this->logger->error("Creating Server GPG Key pair failed. Emails are not going to be signed, expect keys are server keys imported manually", ['app' => $this->appName]);
+			$this->logger->error("Creating Server GPG key pair failed. Emails are not going to be signed, expect keys are server keys imported manually", ['app' => $this->appName]);
 		}
 	}
 }
