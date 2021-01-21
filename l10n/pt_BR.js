@@ -1,12 +1,16 @@
 OC.L10N.register(
     "gpgmailer",
     {
+    "Failed to save Public Key" : "Falha ao salvar a chave pública",
+    "GPG Mailer" : "GPG Mailer",
     "Send encrypted emails to registered users" : "Envie e-mails criptografados para usuários registrados",
+    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Se o usuário envia a chave pública, os e-mails para esse usuário serão criptografados e assinados.\nTodos os outros e-mails serão assinados\nEste aplicativo depende do gnupg.",
     "Server GPG Keys" : "Chaves GPG do servidor",
     "Public Key" : "Chave pública",
     "Download" : "Baixar",
-    "GPG Public Keys" : "Chaves Públicas GPG",
-    "To enable encrypted emails, you must upload your public key below." : "Para habilitar e-mails criptografados, você deve carregar sua chave pública abaixo.",
-    "Download Server Key" : "Baixar a Chave do Servidor"
+    "GPG Public Keys" : "Chaves públicas GPG",
+    "To enable encrypted emails, you must upload your public key below." : "Para habilitar e-mails criptografados, você deve enviar sua chave pública abaixo.",
+    "Your GPG public key" : "Sua chave pública GPG",
+    "Download Server Key" : "Baixar chave do servidor"
 },
 "nplurals=2; plural=(n > 1);");
