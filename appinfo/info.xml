@@ -14,7 +14,9 @@ This App depends on gnupg.</description>
     <category>security</category>
     <category>social</category>
     <category>tools</category>
+    <website>https://github.com/tacruc/gpgmailer</website>
     <bugs>https://github.com/tacruc/gpgmailer/issues</bugs>
+    <repository>https://github.com/tacruc/gpgmailer</repository>
     <dependencies>
         <nextcloud min-version="19" max-version="21"/>
         <lib min-version="1.4.0">gnupg</lib>
