@@ -2,7 +2,7 @@ OC.L10N.register(
     "gpgmailer",
     {
     "Failed to save Public Key" : "Nepodařilo se uložit Veřejný klíč",
-    "GPG Mailer" : "GPG Mailer",
+    "GPG Mailer" : "GPG obálka",
     "Send encrypted emails to registered users" : "Posílejte zašifrované e-maily registrovaným uživatelům",
     "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Pokud uživatel nahraje veřejný klíč, e-maily tomuto uživateli budou zašifrované a podepsané\nOstatní e-maily budou podepsané\nTato aplikace je závislá na gnupg",
     "Server GPG Keys" : "GPG klíče serveru",
