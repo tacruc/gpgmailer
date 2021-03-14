@@ -1,0 +1,16 @@
+OC.L10N.register(
+    "gpgmailer",
+    {
+    "Failed to save Public Key" : "A nyilvános kulcs mentése sikertelen",
+    "GPG Mailer" : "GPG levelező",
+    "Send encrypted emails to registered users" : "Titkosított e-mail küldése regisztrált felhasználóknak",
+    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Amennyiben a felhasználó feltöltött egy nyilvános kulcsot az ennek a felhasználónak küldött e-mailek titosítva és aláírva kerülnek elküldésre.\nAz összes többi csak aláírva.\nEz az alkalmazás a gnupg-re épül.",
+    "Server GPG Keys" : "A kiszolgáló GPG kulcsai",
+    "Public Key" : "Nyilvános kulcs",
+    "Download" : "Letöltés",
+    "GPG Public Keys" : "GPG nyilvános kulcsok",
+    "To enable encrypted emails, you must upload your public key below." : "A titkosított e-mailek engedélyezéséhez először fel kell tölteni egy nyilvános kulcsot.",
+    "Your GPG public key" : "Az Ön nyilvános GPG kulcsa",
+    "Download Server Key" : "A kiszolgáló nyilvános kulcsának letöltése"
+},
+"nplurals=2; plural=(n != 1);");
