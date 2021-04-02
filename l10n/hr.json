@@ -1,0 +1,14 @@
+{ "translations": {
+    "Failed to save Public Key" : "Spremanje javnog ključa nije uspjelo",
+    "GPG Mailer" : "GPG Mailer",
+    "Send encrypted emails to registered users" : "Šaljite šifrirane poruke e-pošte registriranim korisnicima",
+    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Ako korisnik otpremi javni ključ, poruke e-pošte koje se šalju tom korisniku bit će šifrirane i potpisane.\nSve ostale poruke e-pošte bit će potpisane\nOva aplikacija ovisi o gnupg-u.",
+    "Server GPG Keys" : "Poslužiteljski GPG ključevi",
+    "Public Key" : "Javni ključ",
+    "Download" : "Preuzmi",
+    "GPG Public Keys" : "Javni GPG ključevi",
+    "To enable encrypted emails, you must upload your public key below." : "Kako biste omogućili šifrirane poruke e-pošte otpremite svoj javni ključ ispod.",
+    "Your GPG public key" : "Vaš javni GPG ključ",
+    "Download Server Key" : "Preuzmi ključ poslužitelja"
+},"pluralForm" :"nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;"
+}
