@@ -4,7 +4,7 @@ OC.L10N.register(
     "Failed to save Public Key" : "A nyilvános kulcs mentése sikertelen",
     "GPG Mailer" : "GPG levelező",
     "Send encrypted emails to registered users" : "Titkosított e-mail küldése regisztrált felhasználóknak",
-    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Amennyiben a felhasználó feltöltött egy nyilvános kulcsot az ennek a felhasználónak küldött e-mailek titosítva és aláírva kerülnek elküldésre.\nAz összes többi csak aláírva.\nEz az alkalmazás a gnupg-re épül.",
+    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Amennyiben a felhasználó feltöltött egy nyilvános kulcsot, az ennek a felhasználónak küldött e-mailek titkosítva és aláírva kerülnek elküldésre.\nAz összes többi e-mail csak alá lesz írva.\nAz alkalmazás a gnupg-re épül.",
     "Server GPG Keys" : "A kiszolgáló GPG kulcsai",
     "Public Key" : "Nyilvános kulcs",
     "Download" : "Letöltés",
