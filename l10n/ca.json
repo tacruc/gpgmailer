@@ -2,7 +2,7 @@
     "Failed to save Public Key" : "No s'ha pogut desar la clau pública",
     "GPG Mailer" : "GPG Mailer",
     "Send encrypted emails to registered users" : "Envia correus electrònics xifrats a usuaris registrats",
-    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Si l'usuari penja una clau pública, els correus electrònics a aquest usuari seran xifrats i signats. Tots els altres correus electrònics es signaran Aquesta aplicació depèn de gnupg.",
+    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Si l'usuari penja una clau pública, els correus electrònics a aquest usuari seran xifrats i signats.\nTots els altres correus electrònics es signaran\nAquesta aplicació depèn de gnupg.",
     "Server GPG Keys" : "Claus de servidor GPG",
     "Public Key" : "Clau pública",
     "Download" : "Descàrrega",
