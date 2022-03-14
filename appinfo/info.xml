@@ -7,7 +7,7 @@
     <description>If user uploads public key, emails to this user will be encrypted and signed.
 All other emails will be signed
 This App depends on gnupg.</description>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <licence>agpl</licence>
     <author mail="gpgmailer@arne.email" >Arne Hamann</author>
     <namespace>GpgMailer</namespace>
@@ -18,7 +18,7 @@ This App depends on gnupg.</description>
     <bugs>https://github.com/tacruc/gpgmailer/issues</bugs>
     <repository>https://github.com/tacruc/gpgmailer</repository>
     <dependencies>
-        <nextcloud min-version="19" max-version="21"/>
+        <nextcloud min-version="19" max-version="23"/>
         <lib min-version="1.4.0">gnupg</lib>
     </dependencies>
     <repair-steps>
