@@ -1,6 +1,6 @@
 { "translations": {
     "Failed to save Public Key" : "Julkisen avaimen tallennus epäonnistui",
-    "GPG Mailer" : "GPG Mailer",
+    "GPG Mailer" : "GPG-viestittäjä",
     "Send encrypted emails to registered users" : "Lähetä salattuja sähköposteja rekisteröidyille käyttäjille",
     "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Jos käyttäjä lataa julkisen avaimen, sähköpostit kyseiselle käyttäjälle salataan. Sovellus vaatii gnupg.",
     "Server GPG Keys" : "Palvelimen GPG-avaimet",
