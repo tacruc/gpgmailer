@@ -10,5 +10,5 @@
     "To enable encrypted emails, you must upload your public key below." : "Para habilitar los correos electrónicos cifrados, debes subir tu clave pública abajo.",
     "Your GPG public key" : "Su clave pública GPG",
     "Download Server Key" : "Descargar clave del servidor"
-},"pluralForm" :"nplurals=2; plural=(n != 1);"
+},"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

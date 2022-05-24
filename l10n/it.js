@@ -13,4 +13,4 @@ OC.L10N.register(
     "Your GPG public key" : "La tua chiave pubblica GPG",
     "Download Server Key" : "Scarica la chiave del server"
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
