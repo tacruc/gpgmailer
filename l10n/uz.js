@@ -1,6 +1,6 @@
 OC.L10N.register(
     "gpgmailer",
     {
-    "Download" : "Yuklab oling"
+    "Download" : "Download"
 },
 "nplurals=1; plural=0;");
