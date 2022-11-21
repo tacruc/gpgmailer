@@ -5,7 +5,7 @@
     "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Якщо користувач завантажує відкритий ключ, електронні листи для цього користувача будуть зашифровані та підписані. \nУсі інші листи будуть підписані \nЦя програма залежить від gnupg.",
     "Server GPG Keys" : "Серверні ключі GPG",
     "Public Key" : "Відкритий ключ",
-    "Download" : "Завантажити",
+    "Download" : "Звантажити",
     "GPG Public Keys" : "Відкриті ключі GPG",
     "To enable encrypted emails, you must upload your public key below." : "Щоб увімкнути зашифровані електронні листи, ви повинні завантажити відкритий ключ нижче.",
     "Your GPG public key" : "Ваш відкритий ключ GPG",
