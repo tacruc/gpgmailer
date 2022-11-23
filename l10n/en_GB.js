@@ -1,6 +1,16 @@
 OC.L10N.register(
     "gpgmailer",
     {
-    "Download" : "Download"
+    "Failed to save Public Key" : "Failed to save Public Key",
+    "GPG Mailer" : "GPG Mailer",
+    "Send encrypted emails to registered users" : "Send encrypted emails to registered users",
+    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg.",
+    "Server GPG Keys" : "Server GPG Keys",
+    "Public Key" : "Public Key",
+    "Download" : "Download",
+    "GPG Public Keys" : "GPG Public Keys",
+    "To enable encrypted emails, you must upload your public key below." : "To enable encrypted emails, you must upload your public key below.",
+    "Your GPG public key" : "Your GPG public key",
+    "Download Server Key" : "Download Server Key"
 },
 "nplurals=2; plural=(n != 1);");
