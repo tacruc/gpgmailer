@@ -1,6 +1,16 @@
 OC.L10N.register(
     "gpgmailer",
     {
-    "Download" : "Last ned"
+    "Failed to save Public Key" : "Kunne ikke lagre offentlig nøkkel",
+    "GPG Mailer" : "GPG Mailer",
+    "Send encrypted emails to registered users" : "Send krypterte e-poster til registrerte brukere",
+    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Hvis brukeren laster opp offentlig nøkkel, vil e-poster til denne brukeren bli kryptert og signert.\nAlle andre e-poster vil bli signert\nDenne appen avhenger av gnupg.",
+    "Server GPG Keys" : "Server GPG-nøkler",
+    "Public Key" : "Offentlig nøkkel",
+    "Download" : "Last ned",
+    "GPG Public Keys" : "GPG offentlige nøkler",
+    "To enable encrypted emails, you must upload your public key below." : "For å aktivere krypterte e-poster må du laste opp din offentlige nøkkel nedenfor.",
+    "Your GPG public key" : "Din offentlige GPG-nøkkel",
+    "Download Server Key" : "Last ned servernøkkel"
 },
 "nplurals=2; plural=(n != 1);");
