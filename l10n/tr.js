@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Failed to save Public Key" : "Herkese açık anahtar kaydedilemedi",
     "GPG Mailer" : "GPG Mailer",
-    "Send encrypted emails to registered users" : "Kayıtlı kullanıcılara şifrelenmiş e-postalar gönderin",
+    "Send encrypted emails to registered users" : "Hesabı olan kullanıcılara şifrelenmiş e-postalar gönderin",
     "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Bir kullanıcı herkese açık anahtarlarını yüklerse, bu kullanıcıya gönderilen e-postalar şifrelenir ve imzalanır.\nTüm diğer e-postalar imzalanır\nBu uygulama gnupg kullanır.",
     "Server GPG Keys" : "Sunucu GPG anahtarları",
     "Public Key" : "Herkese açık anahtar",
