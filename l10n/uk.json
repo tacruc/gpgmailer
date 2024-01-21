@@ -2,7 +2,7 @@
     "Failed to save Public Key" : "Не вдалося зберегти відкритий ключ",
     "GPG Mailer" : "GPG Mailer",
     "Send encrypted emails to registered users" : "Надсилайте зашифровані електронні листи зареєстрованим користувачам",
-    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Якщо користувач завантажує відкритий ключ, електронні листи для цього користувача будуть зашифровані та підписані. \nУсі інші листи будуть підписані \nЦя програма залежить від gnupg.",
+    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Якщо користувач завантажує відкритий ключ, електронні листи для цього користувача будуть зашифровані та підписані. \nУсі інші листи будуть підписані \nЦей застосунок залежить від gnupg.",
     "Server GPG Keys" : "Серверні ключі GPG",
     "Public Key" : "Відкритий ключ",
     "Download" : "Звантажити",
