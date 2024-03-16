@@ -13,4 +13,4 @@ OC.L10N.register(
     "Your GPG public key" : "מפתח ה־GPG הציבורי שלך",
     "Download Server Key" : "הורדת מפתח השרת"
 },
-"nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");
+"nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;");
