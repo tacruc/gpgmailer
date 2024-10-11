@@ -1,7 +1,7 @@
 OC.L10N.register(
     "gpgmailer",
     {
-    "Failed to save Public Key" : "إخفاق في حفظ المفتاح العمومي",
+    "Failed to save Public Key" : "فشل في حفظ المفتاح العمومي",
     "GPG Mailer" : "بريد GPG المُشفّر",
     "Send encrypted emails to registered users" : "أرسل إيميل مُشفّر للمُستخدمين المُسجّلين",
     "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "عندما يقوم المستخدم برفع المفتاح العمومي، فإن الإيميلات المُرسلة إليه سيتم تشفيرها و توقيعها الكترونيّاً. \n كل الإيميلات الأخرى سيتم توقيعها الكترونيّاً. \nهذا التطبيق يعتمد على GNUpg. ",
