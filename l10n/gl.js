@@ -9,7 +9,7 @@ OC.L10N.register(
     "Public Key" : "Chave pública",
     "Download" : "Descargar",
     "GPG Public Keys" : "Chaves GPG públicas",
-    "To enable encrypted emails, you must upload your public key below." : "Para activar os correos cifrados, debe enviar a súa chave pública a seguir.",
+    "To enable encrypted emails, you must upload your public key below." : "Para activar os correos cifrados, envíe a súa chave pública a seguir.",
     "Your GPG public key" : "A súa chave GPG pública",
     "Download Server Key" : "Descargar a chave do servidor"
 },
