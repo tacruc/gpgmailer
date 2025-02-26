@@ -9,6 +9,6 @@
     "GPG Public Keys" : "Öffentliche GPG-Schlüssel",
     "To enable encrypted emails, you must upload your public key below." : "Um verschlüsselte E-Mails zu aktivieren, müssen Sie unten einen öffentlichen Schlüssel hochladen.",
     "Your GPG public key" : "Ihr öffentlicher GPG-Schlüssel",
-    "Download Server Key" : "Servers-Schlüssel herunterladen"
+    "Download Server Key" : "Serverschlüssel herunterladen"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
