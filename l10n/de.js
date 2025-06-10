@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Failed to save Public Key" : "Das Speichern des öffentlichen Schlüssels ist fehlgeschlagen",
     "GPG Mailer" : "Gpg-Mailer",
-    "Send encrypted emails to registered users" : "Sende verschlüsselte E-Mails an die registrierten Benutzer",
+    "Send encrypted emails to registered users" : "Verschlüsselte E-Mails an registrierten Benutzer senden",
     "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Wenn ein Benutzer einen öffentlichen Schlüssel hochlädt, dann werden E-Mails an den Benutzer verschlüsselt und signiert.\nAlle anderen E-Mails werden signiert.\nDiese App ist von gnupg abhängig.",
     "Server GPG Keys" : "Server GPG-Schlüssel",
     "Public Key" : "Öffentlicher Schlüssel",

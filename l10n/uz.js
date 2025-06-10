@@ -1,6 +1,16 @@
 OC.L10N.register(
     "gpgmailer",
     {
-    "Download" : "Download"
+    "Failed to save Public Key" : "Umumiy kalitni saqlab bo‘lmadi",
+    "GPG Mailer" : "GPG pochtasi",
+    "Send encrypted emails to registered users" : "Ro'yxatdan o'tgan foydalanuvchilarga shifrlangan elektron pochta xabarlarini yuboring",
+    "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Agar foydalanuvchi ochiq kalitni yuklasa, ushbu foydalanuvchiga xatlar shifrlanadi va imzolanadi.\nBoshqa barcha elektron pochta xabarlari imzolanadi\nBu ilova gnupg ga bog'liq.",
+    "Server GPG Keys" : "Server GPG kalitlari",
+    "Public Key" : "Ochiq kalit",
+    "Download" : "Yuklash",
+    "GPG Public Keys" : "GPG ochiq kalitlari",
+    "To enable encrypted emails, you must upload your public key below." : "Shifrlangan elektron pochta xabarlarini yoqish uchun quyida ochiq kalitni yuklashingiz kerak.",
+    "Your GPG public key" : "GPG ochiq kalitingiz",
+    "Download Server Key" : "Server kalitini yuklab oling"
 },
 "nplurals=1; plural=0;");
