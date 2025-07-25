@@ -5,7 +5,7 @@
     "If user uploads public key, emails to this user will be encrypted and signed.\nAll other emails will be signed\nThis App depends on gnupg." : "Agar foydalanuvchi ochiq kalitni yuklasa, ushbu foydalanuvchiga xatlar shifrlanadi va imzolanadi.\nBoshqa barcha elektron pochta xabarlari imzolanadi\nBu ilova gnupg ga bog'liq.",
     "Server GPG Keys" : "Server GPG kalitlari",
     "Public Key" : "Ochiq kalit",
-    "Download" : "Yuklash",
+    "Download" : "Yuklab olish",
     "GPG Public Keys" : "GPG ochiq kalitlari",
     "To enable encrypted emails, you must upload your public key below." : "Shifrlangan elektron pochta xabarlarini yoqish uchun quyida ochiq kalitni yuklashingiz kerak.",
     "Your GPG public key" : "GPG ochiq kalitingiz",
